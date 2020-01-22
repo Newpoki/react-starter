@@ -8,15 +8,13 @@ import { GlobalStyle, theme } from "theme";
 import { ExampleContainer } from "containers";
 import { store } from "store";
 
-export const App = () => {
-  return (
-    <div className="App" style={{ display: "flex" }}>
-      <ThemeProvider theme={theme}>
-        <GlobalStyle />
-        <Provider store={store}>
-          <ExampleContainer />
-        </Provider>
-      </ThemeProvider>
-    </div>
-  );
-};
+export const App = () => (
+  <div className="App" style={{ display: "flex" }}>
+    <ThemeProvider theme={theme}>
+      <GlobalStyle />
+      <Provider store={store}>
+        <ExampleContainer />
+      </Provider>
+    </ThemeProvider>
+  </div>
+);
