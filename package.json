@@ -1,6 +1,12 @@
 {
   "name": "react-starter",
   "version": "0.1.0",
+  "author": {
+    "name": "Jason Savelli",
+    "email": "savellijason@gmail.com",
+    "url": "https://newpoki.github.io/portfolio/#/"
+  },
+  "description": "A starter-pack to start a new project quickly on React with typescript",
   "private": true,
   "dependencies": {
     "react": "^16.12.0",
