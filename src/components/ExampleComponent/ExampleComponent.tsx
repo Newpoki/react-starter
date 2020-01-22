@@ -10,7 +10,7 @@ import { IExampleComponentProps } from "./interface";
  */
 export const ExampleComponent = memo(({ someProp }: IExampleComponentProps) => (
   <Styled.Wrapper>
-    <span>Valeur actuelle de la prop:</span>
-    <span>{someProp.toString()}</span>
+    <Styled.Label>Valeur actuelle de la prop:</Styled.Label>
+    <Styled.Value>{someProp.toString()}</Styled.Value>
   </Styled.Wrapper>
 ));
