@@ -1,9 +1,11 @@
+/** Imports NPM */
 import React from "react";
-
-import { GlobalStyle, theme } from "theme";
-import { ThemeProvider } from "styled-components";
-import { ExampleContainer } from "containers";
 import { Provider } from "react-redux";
+import { ThemeProvider } from "styled-components";
+
+/** Imports locaux */
+import { GlobalStyle, theme } from "theme";
+import { ExampleContainer } from "containers";
 import { store } from "store";
 
 export const App = () => {
