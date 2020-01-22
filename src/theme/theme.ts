@@ -19,6 +19,7 @@ declare module "styled-components" {
   export interface DefaultTheme {
     colors: {
       black: string;
+      red500: string;
     };
     constants: {};
     spacing: IThemeSpacing;
@@ -27,7 +28,8 @@ declare module "styled-components" {
 
 export const theme: DefaultTheme = {
   colors: {
-    black: "rgba(0,0,0, .79)"
+    black: "rgba(0,0,0, .79)",
+    red500: "red"
   },
   constants: {},
   spacing: {
