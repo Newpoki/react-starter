@@ -1,4 +1,7 @@
+/** Imports NPM */
 import { createGlobalStyle } from "styled-components";
+
+/** Imports locaux */
 
 /**
  * StyledComponent qui permet de styliser
