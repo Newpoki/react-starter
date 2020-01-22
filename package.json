@@ -22,6 +22,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "lint": "./node_modules/typescript/bin/tsc",
     "test-coverage": "npm run test -- --coverage --watchAll=false",
     "eject": "react-scripts eject"
   },
