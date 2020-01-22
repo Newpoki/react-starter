@@ -1,3 +1,6 @@
+/** Imports NPM */
+
+/** Improts locaux */
 import { EXAMPLE_REDUCER_TYPE } from "store/actionTypes";
 import { exampleAction } from "./ExampleReducerActions";
 import { IExampleReducerPayload, IExampleReducerAction } from "store/reducers";
