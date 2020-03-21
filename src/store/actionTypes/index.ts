@@ -1,1 +1,1 @@
-export * from "./ExampleReducerActionTypes";
+export * from "./example-reducer/example-reducer";

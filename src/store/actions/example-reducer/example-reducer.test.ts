@@ -2,7 +2,7 @@
 
 /** Improts locaux */
 import { EXAMPLE_REDUCER_TYPE } from "store/actionTypes";
-import { exampleAction } from "./ExampleReducerActions";
+import { exampleAction } from "./example-reducer";
 import { IExampleReducerPayload, IExampleReducerAction } from "store/reducers";
 
 describe("ExampleReducerActions", () => {

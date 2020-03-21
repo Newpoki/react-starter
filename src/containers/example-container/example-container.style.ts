@@ -2,7 +2,8 @@
 import styled from "styled-components";
 
 /** Imports locaux */
-import * as StyledExampleComponent from "components/ExampleComponent/ExampleComponent.style";
+import { theme } from "theme";
+import { Styles } from "components";
 
 /** Wrapper du container <ExampleContainer /> */
 export const Wrapper = styled.div`
@@ -13,6 +14,7 @@ export const Wrapper = styled.div`
   flex-direction: column;
   width: 100%;
 
-  ${StyledExampleComponent.Wrapper} {
+  ${Styles.StyledExampleComponent.Wrapper} {
+    background-color: ${theme.colors.red500};
   }
 `;

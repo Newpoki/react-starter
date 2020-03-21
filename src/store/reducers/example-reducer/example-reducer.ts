@@ -2,7 +2,7 @@
 
 /** Imports locaux */
 import { EXAMPLE_REDUCER_TYPE } from "store/actionTypes";
-import { IExampleReducerAction, IExampleReducer } from "./interface";
+import { IExampleReducerAction, IExampleReducer } from "./example-reducer.interface";
 
 /** State initial du reducer ExampleReducer */
 export const exampleReducerInitialState = {
