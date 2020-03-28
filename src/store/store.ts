@@ -1,17 +1,23 @@
-/** Imports NPM */
-import { createStore, combineReducers } from "redux";
 import { composeWithDevTools } from "redux-devtools-extension";
+import { createStore, combineReducers, applyMiddleware } from "redux";
+import createSagaMiddleware from "redux-saga";
 
-/** Imports locaux */
-import { IExampleReducer, exampleReducer } from "./reducers";
+import { appReducer, IAppReducerState } from "./reducers";
+import { rootSaga } from "./sagas";
 
-/** Interface du store redux */
-export interface IReduxState {
-  exampleReducer: IExampleReducer;
+/** Interface du state du store de l'application */
+export interface IStoreState {
+  app: IAppReducerState;
 }
 
-export const rootReducer = combineReducers({
-  exampleReducer
-});
+const rootReducerState = {
+  app: appReducer
+};
 
-export const store = createStore(rootReducer, composeWithDevTools());
+const rootReducer = combineReducers(rootReducerState);
+
+const sagaMiddleware = createSagaMiddleware();
+
+export const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(sagaMiddleware)));
+
+sagaMiddleware.run(rootSaga);

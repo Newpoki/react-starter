@@ -1,3 +1,2 @@
-export * from "./interfaces";
-
-export * from "./example-reducer/example-reducer";
+export * from "./app/app";
+export * from "./app/app.interface";

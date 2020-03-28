@@ -1,44 +1,27 @@
-import "styled-components";
-import { DefaultTheme } from "styled-components";
+import { getSpacingInPixels } from "./getSpacingInPixels";
+import { IThemeProps } from "./theme.interface";
 
-/** Interface de la partie Size du theme */
-interface IThemeSpacing {
-  xxs: "4px";
-  xs: "8px";
-  s: "16px";
-  m: "24px";
-  l: "32px";
-  xl: "40px";
-  xxl: "48px";
-}
-
-/**
- * Surcharge de l'interface DefaultTheme de Styled component
- */
-declare module "styled-components" {
-  export interface DefaultTheme {
-    colors: {
-      black: string;
-      red500: string;
-    };
-    constants: {};
-    spacing: IThemeSpacing;
-  }
-}
-
-export const theme: DefaultTheme = {
+export const theme: IThemeProps = {
   colors: {
-    black: "rgba(0,0,0, .79)",
-    red500: "red"
+    black: "rgb(0,0,0)",
+    grey: "grey",
+    light200: "rgba(0, 0, 0, 0.6)",
+    light500: "rgb(55, 58, 71)",
+    light600: "rgb(51,51,51)",
+    light600Transparent: "rgba(51,51,51, 0.89)",
+    light900: "rgba(0,0,0, 0.89)",
+    teal200: "rgb(73, 232, 216)",
+    teal600: "rgb(37, 146, 135)",
+    teal800: "rgb(23, 85, 79)",
+    white: "#fff"
   },
-  constants: {},
-  spacing: {
-    xxs: "4px",
-    xs: "8px",
-    s: "16px",
-    m: "24px",
-    l: "32px",
-    xl: "40px",
-    xxl: "48px"
-  }
+  constants: {
+    headerHeight: "80px",
+    linkActiveClassName: "active-link"
+  },
+  fontFamilies: {
+    oswald: "oswald",
+    lato: "lato"
+  },
+  spacing: getSpacingInPixels
 };
